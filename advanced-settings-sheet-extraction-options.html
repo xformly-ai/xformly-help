@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>抽出オプション（シート全体の設定） - xFormly ユーザーガイド</title>
+    
+    <link rel="stylesheet" href="css/common.css">
+</head>
+<body>
+    <div class="top-nav">
+        <div class="nav-content">
+            <a href="index.html" class="home-link">📚 xFormly ユーザーガイド</a>
+            <a href="index.html">← トップページに戻る</a>
+        </div>
+    </div>
+    <div class="breadcrumb">
+        <div class="breadcrumb-content">
+            <a href="index.html">🏠 ホーム</a><span>›</span><a href="advanced-settings.html"><span class="category-badge">詳細設定</span></a><span>›</span>抽出オプション（シート全体の設定）
+        </div>
+    </div>
+
+    
+    <div class="container">
+
+<h1>📊 抽出オプション（シート全体の設定）</h1>
+
+<p>抽出オプション（シート全体の設定）では、Excelシート全体に対する抽出条件を設定できます。CSV出力設定画面で「抽出オプション」ボタンをクリックすると、設定ダイアログが表示されます。</p>
+
+<h2>設定画面の開き方</h2>
+    <img src="images/basic-operations-抽出オプションボタン.png" alt="抽出オプションボタン" style="max-width: 80%; height: auto; margin: 20px 0;">
+
+<ol>
+    <li>Excelファイルをアップロード後、CSV出力設定画面に進みます</li>
+    <li>画面上部の「<strong>抽出オプション</strong>」ボタンをクリック</li>
+    <li>「抽出オプション (シート全体の設定)」ダイアログが表示されます</li>
+</ol>
+
+<h2>設定項目</h2>
+
+<div class="note" style="background-color: #f8fafc; border-left: 4px solid #3b82f6; padding: 20px; margin: 20px 0;">
+    <ol style="margin-top: 10px; margin-bottom: 0;">
+        <li><a href="#setting-1" style="color: #2563eb;">データ部の終端を一括で指定する</a></li>
+        <li><a href="#setting-2" style="color: #2563eb;">入力値を抽出する</a></li>
+        <li><a href="#setting-3" style="color: #2563eb;">空白行・空白列を詰めてデータを取得する</a></li>
+        <li><a href="#setting-4" style="color: #2563eb;">非表示行・非表示列のデータを取得しない</a></li>
+    </ol>
+</div>
+
+<h3 id="setting-1">1. データ部の終端を一括で指定する</h3>
+
+<p>対象セルに始点となる1セルを指定した場合、そこからデータの終端まで一括で範囲を指定できます。</p>
+
+<div class="note">
+    <strong>設定方法:</strong>
+    <ol>
+        <li><strong>スイッチをON</strong>にする</li>
+        <li><strong>方向を選択</strong>: 「一番下まで」または「一番右まで」</li>
+        <li><strong>終端を指定</strong>: 行数（例: 100）または列ラベル（例: Z）を入力</li>
+    </ol>
+</div>
+
+<table>
+    <tr>
+        <th>選択肢</th>
+        <th>説明</th>
+        <th>例</th>
+    </tr>
+    <tr>
+        <td><strong>一番下まで</strong></td>
+        <td>始点セルから指定行数までデータを抽出</td>
+        <td>A2から100行目まで → 「100」と入力</td>
+    </tr>
+    <tr>
+        <td><strong>一番右まで</strong></td>
+        <td>始点セルから指定列までデータを抽出</td>
+        <td>A1からZ列まで → 「Z」と入力</td>
+    </tr>
+</table>
+
+<div class="warning">
+    <strong>⚠️ 注意:</strong>
+    <ul>
+        <li>この設定と「抽出項目ごとの設定」の両方がONの場合、シート全体の設定が優先されます</li>
+        <li>対象セルには必ず1セルのみ指定してください（複数セル指定時は動作しません）</li>
+    </ul>
+</div>
+
+<h3 id="setting-2">2. 入力値を抽出する</h3>
+
+<p>セルの表示形式を無視して、セルに入力されている生データ（元の値）を抽出します。</p>
+
+<div class="note">
+    <strong>設定方法:</strong>
+    <ul>
+        <li><strong>スイッチをON</strong>にする</li>
+    </ul>
+</div>
+
+<h4>使用例</h4>
+
+<table>
+    <tr>
+        <th>Excelの表示</th>
+        <th>実際の値</th>
+        <th>OFF時の出力</th>
+        <th>ON時の出力</th>
+    </tr>
+    <tr>
+        <td>¥1,000</td>
+        <td>1000</td>
+        <td>¥1,000</td>
+        <td>1000</td>
+    </tr>
+    <tr>
+        <td>2024/01/15</td>
+        <td>45306</td>
+        <td>2024/01/15</td>
+        <td>45306</td>
+    </tr>
+    <tr>
+        <td>100%</td>
+        <td>1</td>
+        <td>100%</td>
+        <td>1</td>
+    </tr>
+</table>
+
+<div class="tip">
+    <strong>💡 使用例:</strong> 日付をExcelのシリアル値として取得したい場合や、数値を書式無しで取得したい場合に有効です。
+</div>
+
+<h3 id="setting-3">3. 空白行・空白列を詰めてデータを取得する</h3>
+
+<p>Excelシート内の空白行・空白列を除外し、データのみを詰めて抽出します。</p>
+
+<div class="note">
+    <strong>設定方法:</strong>
+    <ul>
+        <li><strong>スイッチをON</strong>にする</li>
+    </ul>
+</div>
+
+<div class="tip">
+    <strong>💡 使用例:</strong> レイアウト用の空行・空列が含まれているExcelファイルから、実データのみを抽出したい場合に便利です。
+</div>
+
+<h3 id="setting-4">4. 非表示行・非表示列のデータを取得しない</h3>
+
+<p>Excelで非表示に設定されている行や列のデータを出力から除外します。</p>
+
+<div class="note">
+    <strong>設定方法:</strong>
+    <ul>
+        <li><strong>スイッチをON</strong>にする</li>
+    </ul>
+</div>
+
+<h4>使用例</h4>
+
+<p><strong>元のExcelデータ（2行目と列Cが非表示）:</strong></p>
+<pre style="background-color: #f5f5f5; padding: 10px; border-radius: 4px;">
+     A     B     C(非表示)  D
+1    顧客  金額   備考       日付
+2    田中  1000   メモ1      2024/1/1  ← 非表示行
+3    佐藤  2000   メモ2      2024/1/2
+</pre>
+
+<p><strong>ONにした場合の出力:</strong></p>
+<pre style="background-color: #f5f5f5; padding: 10px; border-radius: 4px;">
+A     B     D
+顧客  金額  日付
+佐藤  2000  2024/1/2
+</pre>
+
+<div class="tip">
+    <strong>💡 使用例:</strong> 計算用の補助列や、一時的に非表示にしているデータを出力から除外したい場合に使用します。
+</div>
+
+<h2>設定の保存と再利用</h2>
+
+<p>設定ダイアログで行った変更は、「適用」ボタンをクリックすることで保存されます。保存した設定は、CSV出力パターンとして登録でき、次回以降も再利用できます。</p>
+
+<div class="note">
+    <strong>💡 ヒント:</strong> 
+    <ul>
+        <li>同じ形式のExcelファイルを定期的に処理する場合は、設定を保存しておくと便利です</li>
+        <li>設定は「CSV出力パターン管理」画面から一覧・編集できます</li>
+    </ul>
+</div>
+
+<h2>関連ページ</h2>
+<ul>
+    <li><a href="advanced-settings-column-options.html">抽出オプション（項目ごと）</a></li>
+    <li><a href="basic-operations-csv-output-settings.html">CSV出力設定</a></li>
+    <li><a href="faq.html">よくある質問</a></li>
+</ul>
+
+    </div>
+</body>
+</html>

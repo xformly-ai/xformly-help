@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>出力定義の理解 - xFormly ユーザーガイド</title>
+    
+    <link rel="stylesheet" href="css/common.css">
+</head>
+<body>
+    <div class="top-nav">
+        <div class="nav-content">
+            <a href="index.html" class="home-link">📚 xFormly ユーザーガイド</a>
+            <a href="index.html">← トップページに戻る</a>
+        </div>
+    </div>
+    <div class="breadcrumb">
+        <div class="breadcrumb-content">
+            <a href="index.html">🏠 ホーム</a><span>›</span><a href="basic-operations.html"><span class="category-badge">基本操作</span></a><span>›</span>出力定義の理解
+        </div>
+    </div>
+
+    
+    <div class="container">
+    
+    
+
+<h1>📖 出力定義の理解</h1>
+
+<p>xFormlyでExcelをCSVに変換する際の「出力定義」について、わかりやすく解説します。この仕組みを理解することで、効率的にシステムを活用できるようになります。</p>
+
+
+<h2>🏗️ 出力定義の階層構造</h2>
+
+<p>xFormlyの出力定義は、<strong>2つの階層</strong>で構成されています。この構造により、複雑なExcel変換を柔軟に管理できます。</p>
+
+<div class="hierarchy-box">
+    <div class="hierarchy-level">
+        <h4>📦 第1階層：CSV出力定義（大きな箱）</h4>
+        <p>▶ 役割：複数のExcelレイアウトを出力単位でまとめる。同じCSV出力定義内では、CSVのヘッダー名を共通で利用。</p>
+        <p>▶ 例：「販売管理システム連携用」</p>
+    </div>
+    
+    <div class="hierarchy-level" style="margin-left: 30px;">
+        <h4>📄 第2階層：Excelシート抽出形式（中身の設定）</h4>
+        <p>▶ 役割：具体的なExcelシートの変換ルールを定義</p>
+        <p>▶ 例：「売上明細」「在庫一覧」「顧客情報」</p>
+        <p>▶ 内容：どのExcelのどの場所を、どんな名前（CSVのヘッダー名）で出力するか</p>
+    </div>
+</div>
+
+
+<h2> 実践のコツ</h2>
+
+<details>
+    <summary><strong>Q: どんな単位でCSV出力定義を作ればいい？</strong></summary>
+    <p><strong>A:</strong> 連携先のシステムや業務単位で作成するのがおすすめです。</p>
+    <ul>
+        <li>✅ 良い例：「販売管理システム用」「会計システム用」「人事システム用」</li>
+        <li>❌ 悪い例：「2024年度用」「田中さん用」（時期や担当者で分けない）</li>
+    </ul>
+</details>
+
+<details>
+    <summary><strong>Q: Excelシート抽出形式は何個まで作れる？</strong></summary>
+    <p><strong>A:</strong> 1つのCSV出力定義に、制限なく作成できます。ただし、多すぎると選択が大変になるので、10個程度までを推奨します。</p>
+</details>
+
+<details>
+    <summary><strong>Q: 一度作った設定は変更できる？</strong></summary>
+    <p><strong>A:</strong> はい、いつでも編集できます。ただし、既に使っている設定を変更すると、過去の変換結果と整合性が取れなくなる可能性があるので注意してください。</p>
+</details>
+
+<details>
+    <summary><strong>Q: 同じExcel形式でも微妙に列が違う場合は？</strong></summary>
+    <p><strong>A:</strong> 2つの方法があります：
+        <ul>
+            <li>パターン1：別のExcelシート抽出形式として作成（推奨）</li>
+            <li>パターン2：既存の設定を読み込んで、その場で微調整</li>
+        </ul>
+    </p>
+</details>
+
+<div class="warning">
+    <strong>⚠️ よくある間違い</strong>
+    <ul>
+        <li><strong>間違い：</strong> 毎回「新規作成」で設定している</li>
+        <li><strong>正解：</strong> 初回に設定を保存して、2回目以降は既存設定を使う</li>
+    </ul>
+    <p>同じExcel形式なら、必ず設定を保存して再利用しましょう！</p>
+</div>
+
+<h2>📝 まとめ</h2>
+
+<div class="note">
+    <strong>重要ポイント</strong>
+    <ol>
+        <li><strong>CSV出力定義</strong>：複数のExcelシート抽出形式をまとめる大きな箱</li>
+        <li><strong>Excelシート抽出形式</strong>：具体的な変換ルール（列の定義と位置情報）</li>
+        <li><strong>再利用</strong>：一度作れば何度でも使える、チームで共有できる</li>
+        <li><strong>効率化</strong>：毎回の設定作業が不要になり、大幅に時間短縮</li>
+    </ol>
+</div>
+
+<h2>次のステップ</h2>
+
+<p>出力定義の仕組みを理解したら、実際に設定を作成してみましょう：</p>
+
+<ul>
+    <li><a href="basic-operations-csv-output-settings.html">CSV出力設定の作成</a> - 新しい設定を作る</li>
+    <li><a href="basic-operations-basic-extraction.html">基本的な抽出設定</a> - ヘッダーとデータ範囲を指定する</li>
+</ul>
+
+<h2>関連ページ</h2>
+<ul>
+    <li><a href="basic-operations-upload-excel.html">Excelファイルのアップロード</a></li>
+    <li><a href="advanced-settings.html">詳細設定</a></li>
+    <li><a href="faq.html">よくある質問</a></li>
+</ul>
+
+</body>
+</html>

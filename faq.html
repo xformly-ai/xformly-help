@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>よくある質問 (FAQ) - xFormly ユーザーガイド</title>
+    
+    <link rel="stylesheet" href="css/common.css">
+</head>
+<body>
+    <div class="top-nav">
+        <div class="nav-content">
+            <a href="index.html" class="home-link">📚 xFormly ユーザーガイド</a>
+            <a href="index.html">← トップページに戻る</a>
+        </div>
+    </div>
+    <div class="breadcrumb">
+        <div class="breadcrumb-content">
+            <a href="index.html">🏠 ホーム</a><span>›</span><span class="category-badge">FAQ</span>
+        </div>
+    </div>
+
+    
+    <div class="container">
+    
+    
+
+
+<h1>よくある質問 (FAQ)</h1>
+
+<p>xFormlyの使用に関してよくある質問とその回答をまとめました。お困りの際はまずこちらをご確認ください。</p>
+
+<div class="category-list">
+    <a href="#basic" class="category-card" style="text-decoration: none; color: inherit;">
+        <h3>🚀 基本的な使い方</h3>
+        <p>ログイン、ファイルアップロード、CSV出力など、基本操作に関する質問</p>
+    </a>
+
+    <a href="#conversion" class="category-card" style="text-decoration: none; color: inherit;">
+        <h3>📊 データ変換</h3>
+        <p>Excel形式、データ形式、文字コードなど、変換処理に関する質問</p>
+    </a>
+
+    <a href="#settings" class="category-card" style="text-decoration: none; color: inherit;">
+        <h3>⚙️ 設定・カスタマイズ</h3>
+        <p>フォーマット設定、ヘッダー設定、オプション機能に関する質問</p>
+    </a>
+
+    <a href="#troubleshooting" class="category-card" style="text-decoration: none; color: inherit;">
+        <h3>🔧 トラブルシューティング</h3>
+        <p>エラー対処、動作不良、データ不具合に関する質問</p>
+    </a>
+
+    <a href="#account" class="category-card" style="text-decoration: none; color: inherit;">
+        <h3>💼 アカウント・プラン</h3>
+        <p>プラン変更、課金、使用量制限に関する質問</p>
+    </a>
+
+    <a href="#security" class="category-card" style="text-decoration: none; color: inherit;">
+        <h3>🔒 セキュリティ</h3>
+        <p>データ保護、アクセス制御、プライバシーに関する質問</p>
+    </a>
+</a>
+
+<h2>カテゴリ別FAQ</h2>
+
+<details open>
+    <summary><h3>基本的な使い方</h3></summary>
+    
+    <h4>Q: 初めて使用する際に必要な設定はありますか？</h4>
+    <p><strong>A:</strong> 初回ログイン後、プロフィール設定とデフォルトのCSV出力設定を行うことをお勧めします。</p>
+
+    <h4>Q: 対応しているExcelファイル形式は？</h4>
+    <p><strong>A:</strong> .xlsx（Excel 2007以降）、.xls（Excel 97-2003）形式に対応しています。xlsm（マクロ有効）も読み込み可能ですが、マクロは実行されません。</p>
+
+    <h4>Q: 一度にアップロードできるファイルサイズの制限は？</h4>
+    <p><strong>A:</strong> プランにより異なります。</p>
+    <ul>
+        <li>トライアル: 最大10MB</li>
+        <li>ベーシック: 最大50MB</li>
+        <li>プレミアム: 最大200MB</li>
+    </ul>
+</details>
+
+<details>
+    <summary><h3>データ変換</h3></summary>
+    
+    <h4>Q: 日本語が文字化けしてしまいます</h4>
+    <p><strong>A:</strong> CSV出力設定で文字コードを「Shift-JIS」に設定してください。Excelで開く場合はShift-JISまたはBOM付きUTF-8を推奨します。</p>
+
+    <h4>Q: 結合セルはどのように変換されますか？</h4>
+    <p><strong>A:</strong> デフォルトでは結合セルの左上のセル値が使用されます。詳細設定で全セルに値を展開することも可能です。</p>
+
+    <h4>Q: 数式が含まれるセルの扱いは？</h4>
+    <p><strong>A:</strong> デフォルトでは計算結果の値が出力されます。設定により数式そのものを出力することも可能です。</p>
+
+    <h4>Q: 空白行は出力されますか？</h4>
+    <p><strong>A:</strong> デフォルトでは空白行はスキップされます。設定で保持することも可能です。</p>
+</details>
+
+<details>
+    <summary><h3>設定・カスタマイズ</h3></summary>
+    
+    <h4>Q: ヘッダー行の位置を指定できますか？</h4>
+    <p><strong>A:</strong> はい、CSV出力設定でヘッダー行の開始行を指定できます。複数行ヘッダーにも対応しています。</p>
+
+    <h4>Q: 特定の列だけを出力したい</h4>
+    <p><strong>A:</strong> CSVヘッダー設定で必要な列のみを選択できます。列の順序変更も可能です。</p>
+
+    <h4>Q: 同じ設定を複数のファイルに適用したい</h4>
+    <p><strong>A:</strong> CSV出力パターンとして設定を保存することで、繰り返し使用できます。</p>
+</details>
+
+<details>
+    <summary><h3>トラブルシューティング</h3></summary>
+    
+    <h4>Q: 「ファイルのアップロードに失敗しました」と表示される</h4>
+    <p><strong>A:</strong> 以下を確認してください：</p>
+    <ul>
+        <li>ファイルサイズが制限内か</li>
+        <li>ファイルが破損していないか</li>
+        <li>ネットワーク接続が安定しているか</li>
+        <li>ブラウザのキャッシュをクリアして再試行</li>
+    </ul>
+
+    <h4>Q: 「シートが見つかりません」エラーが出る</h4>
+    <p><strong>A:</strong> Excelファイルに有効なワークシートが含まれているか確認してください。非表示シートも選択可能です。</p>
+
+    <h4>Q: ダウンロードしたCSVが開けない</h4>
+    <p><strong>A:</strong> 文字コード設定が適切か確認してください。Windows版Excelで開く場合はShift-JISを推奨します。</p>
+</details>
+
+<details>
+    <summary><h3>アカウント・プラン</h3></summary>
+    
+    <h4>Q: トライアル期間中に制限はありますか？</h4>
+    <p><strong>A:</strong> はい、以下の制限があります：</p>
+    <ul>
+        <li>月間変換数: 100回</li>
+        <li>ファイルサイズ: 10MBまで</li>
+        <li>データ保持期間: 7日間</li>
+    </ul>
+
+    <h4>Q: プランのアップグレード方法は？</h4>
+    <p><strong>A:</strong> アカウント設定の「サブスクリプション」セクションから変更できます。即座に新プランの機能が利用可能になります。</p>
+
+    <h4>Q: 使用量の確認方法は？</h4>
+    <p><strong>A:</strong> ダッシュボードまたはアカウント設定の「使用量」セクションで確認できます。</p>
+</details>
+
+<details>
+    <summary><h3>セキュリティ</h3></summary>
+    
+    <h4>Q: アップロードしたファイルはどのくらい保存されますか？</h4>
+    <p><strong>A:</strong> プランにより異なります：</p>
+    <ul>
+        <li>トライアル: 7日間</li>
+        <li>ベーシック: 30日間</li>
+        <li>プレミアム: 90日間</li>
+    </ul>
+    <p>手動で削除することも可能です。</p>
+
+    <h4>Q: データは暗号化されていますか？</h4>
+    <p><strong>A:</strong> はい、通信はSSL/TLS暗号化、保存データはAES-256で暗号化されています。</p>
+
+    <h4>Q: 他のユーザーに自分のファイルが見られることはありますか？</h4>
+    <p><strong>A:</strong> いいえ、各ユーザーのデータは完全に分離されています。管理者も含め、他のユーザーがあなたのファイルにアクセスすることはできません。</p>
+</details>
+
+<div class="note">
+    <strong>💡 さらにサポートが必要な場合:</strong>
+    <ul>
+        <li>📧 <strong>メールサポート:</strong> support@xformly.example.com</li>
+        <li>💬 <strong>チャットサポート:</strong> 平日 9:00-18:00</li>
+        <li>📚 <strong>ドキュメント:</strong> <a href="index.html">ユーザーガイドトップ</a></li>
+    </ul>
+</div>
+
+<h2>エラーコード一覧</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>コード</th>
+            <th>メッセージ</th>
+            <th>対処方法</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>E001</code></td>
+            <td>ファイル形式が無効です</td>
+            <td>.xlsx または .xls 形式のファイルを使用してください</td>
+        </tr>
+        <tr>
+            <td><code>E002</code></td>
+            <td>ファイルサイズ超過</td>
+            <td>プランの制限内のファイルサイズにしてください</td>
+        </tr>
+        <tr>
+            <td><code>E003</code></td>
+            <td>シートが見つかりません</td>
+            <td>有効なワークシートが含まれているか確認してください</td>
+        </tr>
+        <tr>
+            <td><code>E004</code></td>
+            <td>変換処理エラー</td>
+            <td>ファイル内容を確認し、サポートにお問い合わせください</td>
+        </tr>
+        <tr>
+            <td><code>E005</code></td>
+            <td>月間変換数超過</td>
+            <td>プランをアップグレードするか、次月までお待ちください</td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="tip">
+    <strong>🔍 解決しない場合:</strong> エラーコードとエラーメッセージをコピーして、サポートチームにお問い合わせください。迅速に対応いたします。
+</div>
+
+<h2>関連ページ</h2>
+<ul>
+    <li><a href="getting-started.html">はじめに</a></li>
+    <li><a href="basic-operations.html">基本操作</a></li>
+    <li><a href="advanced-settings.html">詳細設定</a></li>
+    <li><a href="admin-guide.html">管理者向けガイド</a></li>
+</ul>
+
+    </div>
+</body>
+</html>

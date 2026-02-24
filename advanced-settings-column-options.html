@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>抽出オプション（項目ごと） - xFormly ユーザーガイド</title>
+    
+    <link rel="stylesheet" href="css/common.css">
+</head>
+<body>
+    <div class="top-nav">
+        <div class="nav-content">
+            <a href="index.html" class="home-link">📚 xFormly ユーザーガイド</a>
+            <a href="index.html">← トップページに戻る</a>
+        </div>
+    </div>
+    <div class="breadcrumb">
+        <div class="breadcrumb-content">
+            <a href="index.html">🏠 ホーム</a><span>›</span><a href="advanced-settings.html"><span class="category-badge">詳細設定</span></a><span>›</span>抽出オプション（項目ごと）
+        </div>
+    </div>
+
+    
+    <div class="container">
+
+<h1>⚙️ 抽出オプション（項目ごと）</h1>
+
+<p>抽出オプション（項目ごと）では、CSVの各列（項目）に対して個別に設定を行います。データフォーマット指定、必須チェック、桁数チェックなど、列ごとに異なる処理を定義できます。</p>
+    <img src="images/advanced-settings-項目抽出オプション.png" alt="項目抽出オプション" style="max-width: 80%; height: auto; margin: 20px 0;">
+
+<h2>設定画面の開き方</h2>
+<ol>
+    <li>Excelファイルをアップロード後、Excelシート抽出形式設定画面に進みます</li>
+    <li>ヘッダー名の入力欄の横にある「<strong>︙</strong>」ボタンをクリックします。</li>
+</ol>
+
+<h2>設定項目</h2>
+
+<div class="note" style="background-color: #f8fafc; border-left: 4px solid #3b82f6; padding: 20px; margin: 20px 0;">
+    <strong>📋 設定項目一覧</strong>
+    <ol style="margin-top: 10px; margin-bottom: 0;">
+        <li><a href="#setting-1" style="color: #2563eb;">ヘッダー名（メモ用）</a></li>
+        <li><a href="#setting-2" style="color: #2563eb;">ヘッダー説明文</a></li>
+        <li><a href="#setting-3" style="color: #2563eb;">データ部の終端を一括で指定する</a></li>
+        <li><a href="#setting-4" style="color: #2563eb;">単セルの値を全行に入力する</a></li>
+        <li><a href="#setting-5" style="color: #2563eb;">入力値を抽出する</a></li>
+        <li><a href="#setting-6" style="color: #2563eb;">日時のフォーマットを選択する</a></li>
+        <li><a href="#setting-7" style="color: #2563eb;">必須チェック</a></li>
+        <li><a href="#setting-8" style="color: #2563eb;">桁数チェック</a></li>
+    </ol>
+</div>
+
+<h3 id="setting-1">1. ヘッダー名（メモ用）</h3>
+
+<p>各項目に対して任意の名前を設定できます。この名前はメモ用であり、実際のCSV出力には影響しません。</p>
+
+<div class="note">
+    <strong>設定方法:</strong>
+    <ul>
+        <li>テキストボックスに任意の名前を入力</li>
+        <li>例: 「顧客コード」「注文日」など、わかりやすい名前を付けることができます</li>
+    </ul>
+</div>
+
+<h3 id="setting-2">2. ヘッダー説明文</h3>
+
+<p>各項目に対して説明文を記載できます。データの仕様や注意事項などを記録するのに便利です。</p>
+
+<div class="note">
+    <strong>設定方法:</strong>
+    <ul>
+        <li>複数行テキストエリアに説明を入力</li>
+        <li>例: 「8桁の数値コード。先頭ゼロあり」など</li>
+    </ul>
+</div>
+
+<h3 id="setting-3">3. データ部の終端を一括で指定する</h3>
+
+<p>対象セルに始点となる1セルを指定した場合、その項目について、データの終端まで一括で範囲を指定できます。</p>
+
+<div class="note">
+    <strong>設定方法:</strong>
+    <ol>
+        <li><strong>スイッチをON</strong>にする</li>
+        <li><strong>方向を選択</strong>: 「一番下まで」または「一番右まで」</li>
+        <li><strong>終端を指定</strong>: 行数（例: 100）または列ラベル（例: Z）を入力</li>
+    </ol>
+</div>
+
+<table>
+    <tr>
+        <th>選択肢</th>
+        <th>説明</th>
+        <th>例</th>
+    </tr>
+    <tr>
+        <td><strong>一番下まで</strong></td>
+        <td>始点セルから指定行数までデータを抽出</td>
+        <td>A2から100行目まで → 「100」と入力</td>
+    </tr>
+    <tr>
+        <td><strong>一番右まで</strong></td>
+        <td>始点セルから指定列までデータを抽出</td>
+        <td>A1からZ列まで → 「Z」と入力</td>
+    </tr>
+</table>
+
+<div class="warning">
+    <strong>⚠️ 注意:</strong>
+    <ul>
+        <li>「シート全体の設定」で同じ機能がONの場合は、シート全体の設定が優先されます</li>
+        <li>対象セルには必ず1セルのみ指定してください</li>
+    </ul>
+</div>
+
+<h3 id="setting-4">4. 単セルの値を全行に入力する</h3>
+
+<p>対象セルに指定した1つの値を、全ての行に対してコピーして出力します。</p>
+
+<div class="note">
+    <strong>設定方法:</strong>
+    <ul>
+        <li><strong>スイッチをON</strong>にする</li>
+    </ul>
+</div>
+
+<h4>使用例</h4>
+
+<p><strong>元のExcelデータ（対象セル: A2）:</strong></p>
+<pre style="background-color: #f5f5f5; padding: 10px; border-radius: 4px;">
+     A       B
+1    区分    金額
+2    売上    1000
+3            2000
+4            3000
+</pre>
+
+<p><strong>ONにした場合の出力:</strong></p>
+<pre style="background-color: #f5f5f5; padding: 10px; border-radius: 4px;">
+A       B
+売上    1000
+売上    2000
+売上    3000
+</pre>
+
+<div class="tip">
+    <strong>💡 使用例:</strong> 固定値（支店名、処理日付など）をすべての行に付加したい場合に便利です。
+</div>
+
+<h3 id="setting-5">5. 入力値を抽出する</h3>
+
+<p>セルの表示形式を無視して、セルに入力されている生データ（元の値）を抽出します。</p>
+
+<div class="note">
+    <strong>設定方法:</strong>
+    <ul>
+        <li><strong>スイッチをON</strong>にする</li>
+    </ul>
+</div>
+
+<h4>使用例</h4>
+
+<table>
+    <tr>
+        <th>Excelの表示</th>
+        <th>実際の値</th>
+        <th>OFF時の出力</th>
+        <th>ON時の出力</th>
+    </tr>
+    <tr>
+        <td>¥1,000</td>
+        <td>1000</td>
+        <td>¥1,000</td>
+        <td>1000</td>
+    </tr>
+    <tr>
+        <td>2024/01/15</td>
+        <td>45306</td>
+        <td>2024/01/15</td>
+        <td>45306</td>
+    </tr>
+    <tr>
+        <td>100%</td>
+        <td>1</td>
+        <td>100%</td>
+        <td>1</td>
+    </tr>
+</table>
+
+<h3 id="setting-6">6. 日時のフォーマットを選択する</h3>
+
+<p><strong>「入力値を抽出する」がONの場合のみ</strong>設定できます。Excelのシリアル値として取得した日付を、指定したフォーマットに変換します。</p>
+
+<div class="note">
+    <strong>設定方法:</strong>
+    <ol>
+        <li>まず「入力値を抽出する」をONにする</li>
+        <li>ドロップダウンから日時フォーマットを選択</li>
+    </ol>
+</div>
+
+<h4>選択可能なフォーマット</h4>
+
+<table>
+    <tr>
+        <th>フォーマット</th>
+        <th>出力例</th>
+        <th>説明</th>
+    </tr>
+    <tr>
+        <td>指定無し</td>
+        <td>45306</td>
+        <td>シリアル値のまま出力</td>
+    </tr>
+    <tr>
+        <td>yyyy/mm/dd</td>
+        <td>2024/01/15</td>
+        <td>年/月/日</td>
+    </tr>
+    <tr>
+        <td>yyyy/mm/dd hh:mm:ss</td>
+        <td>2024/01/15 14:30:00</td>
+        <td>年/月/日 時:分:秒</td>
+    </tr>
+</table>
+
+<div class="tip">
+    <strong>💡 使用例:</strong> 日付データを確実に制御したい場合、まず入力値抽出でシリアル値を取得し、その後フォーマット変換を適用します。
+</div>
+
+<h3 id="setting-7">7. 必須チェック</h3>
+
+<p>この項目に値が入力されているかをCSV出力時にチェックします。値が欠損している行がある場合、エラーを表示してダウンロードを中止します。</p>
+
+<div class="note">
+    <strong>設定方法:</strong>
+    <ul>
+        <li><strong>スイッチをON</strong>にする</li>
+    </ul>
+</div>
+
+<h4>チェックタイミング</h4>
+
+<p>CSV出力（ダウンロード）ボタンをクリックした時に、バックエンドで自動的にチェックされます。</p>
+
+<h4>空白と判定される条件</h4>
+
+<p>以下のいずれかに該当するセルは「空白」として扱われます：</p>
+
+<ul>
+    <li>セルに値がない（空セル）</li>
+    <li>空白文字のみが入力されている（例: 半角スペース、全角スペース）</li>
+    <li>数値計算の結果がNaN（Not a Number）になっている</li>
+</ul>
+
+<h4>エラー発生時の動作</h4>
+
+<ul>
+    <li>必須チェックがONの項目で空白が見つかった場合、次のようなエラーメッセージが表示されます：<br>
+        <code>【必須チェックエラー】「項目名」の○行目に値がありません。</code>
+    </li>
+    <li>エラーがある場合、CSV出力は実行されず、どの項目の何行目にエラーがあるかが通知されます</li>
+    <li>すべてのエラーが一覧表示されるため、複数の項目や行にエラーがある場合も一度に確認できます</li>
+</ul>
+
+<div class="tip">
+    <strong>💡 使用例:</strong> 顧客コード、注文日、金額など、システムで必須となる項目に設定します。設定しておくことで、不完全なデータの出力を防ぎ、後続処理でのエラーを未然に防ぐことができます。
+</div>
+
+<h3 id="setting-8">8. 桁数チェック</h3>
+
+<p>データの桁数（文字数）をチェックします。最小桁数・最大桁数のどちらか、または両方を設定できます。</p>
+
+<div class="note">
+    <strong>設定方法:</strong>
+    <ol>
+        <li><strong>スイッチをON</strong>にする</li>
+        <li><strong>最小桁数</strong>: 最小の文字数を入力（0〜指定可能）</li>
+        <li><strong>最大桁数</strong>: 最大の文字数を入力（0〜指定可能）</li>
+    </ol>
+</div>
+
+<h4>チェックタイミング</h4>
+
+<p>必須チェックと同様に、CSV出力（ダウンロード）ボタンをクリックした時にチェックされます。</p>
+
+<h4>桁数の数え方</h4>
+
+<ul>
+    <li>値を文字列に変換してから、前後の空白を削除して文字数をカウントします</li>
+    <li>数値データの場合も、文字列に変換してからカウントされます（例: 12345 → "12345" → 5桁）</li>
+    <li><strong>重要:</strong> 空白セル（値がないセル）は桁数チェックの対象外です。空白セルもチェックしたい場合は、必須チェックと併用してください</li>
+</ul>
+
+<h4>エラー発生時の動作</h4>
+
+<ul>
+    <li>桁数範囲外のデータが見つかった場合、次のようなエラーメッセージが表示されます：<br>
+        <code>【桁数チェックエラー】「項目名」の○行目が桁数範囲外です。（最小○桁/最大○桁）</code>
+    </li>
+    <li>エラーがある場合、CSV出力は実行されず、どの項目の何行目にエラーがあるかが通知されます</li>
+</ul>
+
+<h4>設定例</h4>
+
+<table>
+    <tr>
+        <th>項目</th>
+        <th>最小桁数</th>
+        <th>最大桁数</th>
+        <th>説明</th>
+    </tr>
+    <tr>
+        <td>郵便番号</td>
+        <td>7</td>
+        <td>7</td>
+        <td>必ず7桁</td>
+    </tr>
+    <tr>
+        <td>電話番号</td>
+        <td>10</td>
+        <td>11</td>
+        <td>10桁または11桁</td>
+    </tr>
+    <tr>
+        <td>商品コード</td>
+        <td>8</td>
+        <td>未設定</td>
+        <td>最低8桁以上</td>
+    </tr>
+    <tr>
+        <td>メモ</td>
+        <td>未設定</td>
+        <td>100</td>
+        <td>100桁以内</td>
+    </tr>
+</table>
+
+<div class="warning">
+    <strong>⚠️ 注意:</strong>
+    <ul>
+        <li>最小桁数 > 最大桁数 となる設定はできません（設定時にエラーメッセージが表示されます）</li>
+        <li>桁数は0以上の整数で指定してください</li>
+        <li>空白セル以外のすべての値がチェック対象になります（数値、テキスト問わず）</li>
+        <li>必須の項目で桁数も指定したい場合は、「必須チェック」と「桁数チェック」を両方ONにしてください</li>
+    </ul>
+</div>
+
+<h2>設定の保存と再利用</h2>
+
+<p>設定ダイアログで行った変更は、「適用」ボタンをクリックすることで保存されます。保存した設定は、CSV出力パターンとして登録でき、次回以降も再利用できます。</p>
+
+<div class="note">
+    <strong>💡 ヒント:</strong> 
+    <ul>
+        <li>同じ形式のExcelファイルを定期的に処理する場合は、設定を保存しておくと便利です</li>
+        <li>設定は「CSV出力パターン管理」画面から一覧・編集できます</li>
+    </ul>
+</div>
+
+<h2>実際の設定例</h2>
+
+<h3>例1: 顧客マスターデータ</h3>
+
+<table>
+    <tr>
+        <th>項目名</th>
+        <th>設定内容</th>
+    </tr>
+    <tr>
+        <td>顧客コード</td>
+        <td>
+            • ヘッダー名: 「顧客コード（8桁）」<br>
+            • 必須チェック: ON<br>
+            • 桁数チェック: 最小8、最大8
+        </td>
+    </tr>
+    <tr>
+        <td>登録日</td>
+        <td>
+            • 入力値を抽出: ON<br>
+            • 日時フォーマット: %Y-%m-%d<br>
+            • 必須チェック: ON
+        </td>
+    </tr>
+    <tr>
+        <td>電話番号</td>
+        <td>
+            • 桁数チェック: 最小10、最大11
+        </td>
+    </tr>
+</table>
+
+<h3>例2: 売上データ</h3>
+
+<table>
+    <tr>
+        <th>項目名</th>
+        <th>設定内容</th>
+    </tr>
+    <tr>
+        <td>売上日</td>
+        <td>
+            • 入力値を抽出: ON<br>
+            • 日時フォーマット: %Y/%m/%d<br>
+            • 必須チェック: ON
+        </td>
+    </tr>
+    <tr>
+        <td>金額</td>
+        <td>
+            • 入力値を抽出: ON（書式なしの数値取得）<br>
+            • 必須チェック: ON
+        </td>
+    </tr>
+    <tr>
+        <td>支店コード</td>
+        <td>
+            • 単セルの値を全行に入力: ON（固定値として出力）
+        </td>
+    </tr>
+</table>
+
+<h2>関連ページ</h2>
+<ul>
+    <li><a href="advanced-settings-sheet-extraction-options.html">抽出オプション（シート全体の設定）</a></li>
+    <li><a href="basic-operations-csv-output-settings.html">CSV出力設定</a></li>
+    <li><a href="faq.html">よくある質問</a></li>
+</ul>
+
+    </div>
+</body>
+</html>

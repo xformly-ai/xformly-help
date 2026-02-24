@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excelファイルのアップロード - xFormly ユーザーガイド</title>
+    <link rel="stylesheet" href="css/common.css">
+    </head>
+<body>
+    <div class="top-nav">
+        <div class="nav-content">
+            <a href="index.html" class="home-link">📚 xFormly ユーザーガイド</a>
+            <a href="index.html">← トップページに戻る</a>
+        </div>
+    </div>
+    <div class="breadcrumb">
+        <div class="breadcrumb-content">
+            <a href="index.html">🏠 ホーム</a><span>›</span><a href="basic-operations.html"><span class="category-badge">基本操作</span></a><span>›</span>Excelファイルのアップロード
+        </div>
+    </div>
+
+    <div class="container">
+        
+        <h1>📤 Excelファイルのアップロード</h1>
+        <p>ExcelファイルをxFormlyにアップロードして、CSV変換の準備を行います。</p>
+        <hr>
+        <h2>📂 アップロード方法</h2>
+        <p>メイン画面左側の「Excelファイルアップロード」エリアで、以下のいずれかの方法でファイルを選択します。</p>
+        <img src="images/basic-operations-アップロードエリア.png" alt="アップロードエリア" style="max-width: 50%; height: auto; border: 1px solid #e5e7eb; border-radius: 6px; margin: 20px 0;">
+        <ul>
+            <li><strong>ドラッグ&ドロップ:</strong> Excelファイルをアップロードエリアにドラッグ&ドロップ</li>
+            <li><strong>ファイル選択:</strong> 「ファイルを選択」ボタンをクリックして、エクスプローラーからファイルを選択</li>
+        </ul>
+        <hr>
+        <h2>🚀 次のステップ</h2>
+        <p>ファイルを選択したら、「アップロード」ボタンをクリックして処理を開始します。</p>
+        <img src="images/basic-operations-アップロードボタン.png" alt="アップロードボタン" style="max-width: 50%; height: auto; border: 1px solid #e5e7eb; border-radius: 6px; margin: 20px 0;">
+        <hr>
+        <h2>📋 アップロード仕様</h2>
+        <table>
+            <tr><th>項目</th><th>制限</th></tr>
+            <tr><td><strong>対応形式</strong></td><td>.xlsx (Excel 2007以降)、.xlsm (マクロ有効ブック)</td></tr>
+            <tr><td><strong>非対応形式</strong></td><td>.xls (Excel 2003以前)、その他のファイル形式</td></tr>
+            <tr><td><strong>複数ファイル</strong></td><td>同時選択可能</td></tr>
+            <tr><td><strong>ファイルサイズ</strong></td><td>ブラウザの制限に準拠</td></tr>
+        </table>
+        <div class="note">
+            <strong>💡 ヒント:</strong> .xls形式のファイルは、一度Excelで開いて.xlsx形式で保存し直してからアップロードしてください。
+        </div>
+        <div class="warning">
+            <strong>⚠️ 注意:</strong> アップロードされたファイルは、CSVダウンロード後にサーバー上から完全に削除されます。セキュリティ上、データは一時的にのみ保持されます。
+        </div>
+        <hr>
+        <h2>⚠️ トラブルシューティング</h2>
+        <details>
+            <summary>❌ 「アップロード対応ファイルは「.xlsx」「.xlsm」のみです。」と表示される</summary>
+            <p><strong>原因:</strong> 非対応のファイル形式（.xls等）を選択しています。</p>
+            <p><strong>解決方法:</strong></p>
+            <ol>
+                <li>Excelで対象ファイルを開く</li>
+                <li>「ファイル」→「名前を付けて保存」</li>
+                <li>ファイル形式を「.xlsx」に変更して保存</li>
+                <li>再度アップロード</li>
+            </ol>
+        </details>
+        <details>
+            <summary>❌ ファイルをドラッグしても反応しない</summary>
+            <p><strong>原因:</strong> ブラウザの設定やセキュリティソフトが影響している可能性があります。</p>
+            <p><strong>解決方法:</strong></p>
+            <ul>
+                <li>方法2の「ファイルを選択」ボタンを使用</li>
+                <li>ブラウザを再読み込み（F5キー）</li>
+                <li>別のブラウザで試す</li>
+            </ul>
+        </details>
+        <details>
+            <summary>💡 アップロードしたファイルはいつまで保存されますか？</summary>
+            <p><strong>回答:</strong> アップロードされたファイルは以下のタイミングで自動削除されます：</p>
+            <ul>
+                <li>CSVダウンロード完了後</li>
+                <li>セッションタイムアウト時（1時間）</li>
+                <li>「やり直し」ボタン押下時</li>
+            </ul>
+            <p>個人情報保護のため、一時的にのみ保持される設計です。</p>
+        </details>
+        <hr>
+        <div class="note">
+            <strong>次のページ:</strong> <a href="./02_CSV出力設定.html">CSV出力設定</a>で変換設定を選択しましょう！
+        </div>
+        <p><strong>最終更新日:</strong> 2026年1月22日</p>
+    </div>
+</body>
+</html>
