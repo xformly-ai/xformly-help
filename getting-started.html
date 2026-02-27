@@ -7,11 +7,10 @@
     
     <link rel="stylesheet" href="css/common.css">
 </head>
-<body>
+<body class="page-search-floating">
     <div class="top-nav">
         <div class="nav-content">
             <a href="index.html" class="home-link">📚 xFormly ユーザーガイド</a>
-            <a href="index.html">← トップページに戻る</a>
         </div>
     </div>
     <div class="breadcrumb">
@@ -29,16 +28,22 @@
 
 <p>xFormlyへようこそ！このセクションでは、xFormlyの概要とログイン方法について説明します。</p>
 
-<div class="category-list">
-    <a href="getting-started-what-is-xformly.html" class="category-card" style="text-decoration: none; color: inherit;">
-        <h3>📖 xFormlyとは</h3>
-        <p>xFormlyの概要、主な機能、プラン、できることを紹介します。</p>
-    </a>
+<div class="search-box">
+    <input type="text" placeholder="🔍 このページ内を検索..." id="searchInput">
+    <p class="search-help">カテゴリカードのタイトル・説明を部分一致で絞り込みます（最大表示制限なし）。</p>
+    <p class="search-status" id="pageSearchStatus" hidden></p>
+</div>
 
-    <a href="getting-started-login-logout.html" class="category-card" style="text-decoration: none; color: inherit;">
-        <h3>🔑 ログイン・ログアウト</h3>
+<div class="category-list">
+    <div class="category-card" data-category-url="getting-started-what-is-xformly.html" tabindex="0" role="link">
+        <h3><a class="panel-title-link" href="getting-started-what-is-xformly.html">📖 xFormlyとは</a></h3>
+        <p>xFormlyの概要、主な機能、プラン、できることを紹介します。</p>
+    </div>
+
+    <div class="category-card" data-category-url="getting-started-login-logout.html" tabindex="0" role="link">
+        <h3><a class="panel-title-link" href="getting-started-login-logout.html">🔑 ログイン・ログアウト</a></h3>
         <p>システムへのログイン方法、パスワード再設定、ログアウト方法を説明します。</p>
-    </a>
+    </div>
 </div>
 
 <h2>次のステップ</h2>
@@ -49,6 +54,22 @@
 <ul>
     <li><a href="basic-operations.html">基本操作</a></li>
 </ul>
+
+<script src="js/common-interactions.js"></script>
+<script src="js/page-search.js"></script>
+<script>
+    const searchInput = document.getElementById('searchInput');
+    const searchStatus = document.getElementById('pageSearchStatus');
+    const categoryCards = Array.from(document.querySelectorAll('.category-card'));
+    window.setupPageSearch({
+        input: searchInput,
+        status: searchStatus,
+        targets: categoryCards
+    });
+
+    window.setupPanelNavigation(categoryCards);
+</script>
+<script src="js/shared-header.js"></script>
 
     </div>
 </body>

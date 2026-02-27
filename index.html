@@ -7,97 +7,93 @@
     
     <link rel="stylesheet" href="css/common.css">
 </head>
-<body>
-    <div class="container">
-        <div class="header">
-            <h1>📚 xFormly ユーザーガイド</h1>
-            <p>Excel to CSV 変換ツールの完全マニュアル</p>
+<body class="page-index-floating">
+    <div class="top-nav">
+        <div class="nav-content">
+            <a href="index.html" class="home-link">📚 xFormly ユーザーガイド</a>
         </div>
-
-        <div class="search-box">
-            <input type="text" placeholder="🔍 ガイド内を検索..." id="searchInput">
-        </div>
-
-        <div class="nav-grid">
-            <a href="getting-started.html" class="nav-card">
-                <h2><span class="emoji">🚀</span>はじめに</h2>
-                <p>xFormlyの概要とアカウント設定</p>
-                <div class="description">
-                    xFormlyとは<br>
-                    ログイン・ログアウト<br>
-                    初期設定<br>
-                    プロフィール編集<br>
-                    パスワード変更<br>
-                    メールアドレス変更
-                </div>
-            </a>
-
-            <a href="basic-operations.html" class="nav-card">
-                <h2><span class="emoji">⚡</span>基本操作</h2>
-                <p>ファイルアップロードからCSV出力まで</p>
-                <div class="description">
-                    出力定義の理解<br>
-                    Excelファイルのアップロード<br>
-                    CSV出力設定（新規作成と既存設定の選択）<br>
-                    基本的な抽出設定<br>
-                    CSVのダウンロード
-                </div>
-            </a>
-
-            <a href="advanced-settings.html" class="nav-card">
-                <h2><span class="emoji">⚙️</span>詳細設定</h2>
-                <p>より高度な変換機能</p>
-                <div class="description">
-                    抽出オプション（シート全体の設定）<br>
-                    抽出オプション（項目ごと）
-                </div>
-            </a>
-
-            <a href="admin-guide.html" class="nav-card">
-                <h2><span class="emoji">👥</span>管理者向けガイド</h2>
-                <p>組織・ユーザー管理とシステム設定</p>
-                <div class="description">
-                    ユーザー管理<br>
-                    組織・部門管理<br>
-                    権限・ロール管理<br>
-                    サブスクリプション管理
-                </div>
-            </a>
-
-            <a href="faq.html" class="nav-card">
-                <h2><span class="emoji">❓</span>FAQ</h2>
-                <p>よくある質問と解決方法</p>
-                <div class="description">
-                    トラブルシューティング<br>
-                    よくある質問
-                </div>
-            </a>
-        </div>
-
-        <div class="quick-links">
-            <h3>🎯 クイックリンク</h3>
-            <ul>
-                <li>🆕 <a href="getting-started-what-is-xformly.html">xFormlyを初めて使う方へ</a></li>
-                <li>📤 <a href="basic-operations-upload-excel.html">ファイルをアップロードする</a></li>
-                <li>📋 <a href="basic-operations-basic-extraction.html">ヘッダーとデータ範囲を指定する</a></li>
-                <li>⚙️ <a href="basic-operations-csv-output-settings.html">CSV出力設定を選択する</a></li>
-                <li>💾 <a href="basic-operations-download-csv.html">CSVファイルをダウンロードする</a></li>
-            </ul>
-        </div>
-
-        <div class="footer">
-            <p><strong>xFormly</strong> - Excel to CSV 変換サービス</p>
-            <p>バージョン 1.0 | 最終更新: 2026年2月</p>
-            <p>📧 サポート: support@xformly.example.com</p>
+    </div>
+    <div class="breadcrumb">
+        <div class="breadcrumb-content">
+            <a href="index.html">🏠 ホーム</a>
         </div>
     </div>
 
+    <div class="container">
+        <div class="search-box">
+            <input type="text" placeholder="🔍 ガイド内を検索..." id="searchInput">
+            <p class="search-help">入力すると「トップページ内の項目」を絞り込み、下部に「全ガイド横断の候補ページ（最大8件）」を表示します。</p>
+        </div>
+
+        <div class="global-search-results" id="globalSearchResults" hidden>
+            <h3>🔎 全ガイド検索結果</h3>
+            <p class="search-status" id="searchStatus"></p>
+            <ul id="searchResultsList"></ul>
+        </div>
+
+        <div class="nav-grid">
+            <div class="nav-card" data-category-url="getting-started.html">
+                <h2><a href="getting-started.html"><span class="emoji">🚀</span>はじめに</a></h2>
+                <p>xFormlyの概要とアカウント設定</p>
+                <div class="description">
+                    <a href="getting-started-what-is-xformly.html">xFormlyとは</a>
+                    <a href="getting-started-login-logout.html">ログイン・ログアウト</a>
+                </div>
+            </div>
+
+            <div class="nav-card" data-category-url="basic-operations.html">
+                <h2><a href="basic-operations.html"><span class="emoji">⚡</span>基本操作</a></h2>
+                <p>ファイルアップロードからCSV出力まで</p>
+                <div class="description">
+                    <a href="basic-operations-understanding-definitions.html">出力定義の理解</a>
+                    <a href="basic-operations-upload-excel.html">Excelファイルのアップロード</a>
+                    <a href="basic-operations-csv-output-settings.html">CSV出力設定（新規作成と既存設定の選択）</a>
+                    <a href="basic-operations-basic-extraction.html">基本的な抽出設定</a>
+                    <a href="basic-operations-download-csv.html">CSVのダウンロード</a>
+                </div>
+            </div>
+
+            <div class="nav-card" data-category-url="advanced-settings.html">
+                <h2><a href="advanced-settings.html"><span class="emoji">⚙️</span>詳細設定</a></h2>
+                <p>より高度な変換機能</p>
+                <div class="description">
+                    <a href="advanced-settings-sheet-extraction-options.html">抽出オプション（シート全体の設定）</a>
+                    <a href="advanced-settings-column-options.html">抽出オプション（項目ごと）</a>
+                </div>
+            </div>
+
+        </div>
+
+           <div class="footer">
+            <p><a href="https://www.x-formly.com/" target="_blank" rel="noopener noreferrer">https://www.x-formly.com/</a></p>
+        </div>
+    </div>
+
+    <script src="js/common-interactions.js"></script>
+    <script src="js/guide-metadata.js"></script>
+    <script src="js/index-search.js"></script>
     <script>
-        // 簡易検索機能（将来的に実装）
-        document.getElementById('searchInput').addEventListener('input', function(e) {
-            // 検索機能は将来実装
-            console.log('検索:', e.target.value);
+        const searchInput = document.getElementById('searchInput');
+        const navCards = Array.from(document.querySelectorAll('.nav-card'));
+        const quickLinkItems = Array.from(document.querySelectorAll('.quick-links li'));
+        const globalSearchResults = document.getElementById('globalSearchResults');
+        const searchStatus = document.getElementById('searchStatus');
+        const searchResultsList = document.getElementById('searchResultsList');
+
+        window.setupIndexSearch({
+            searchInput,
+            navCards,
+            quickLinkItems,
+            globalSearchResults,
+            searchStatus,
+            searchResultsList,
+            guideMetadata: window.guideMetadata || [],
+            searchResultLimit: 8,
+            searchDebounceMs: 150
         });
+
+        window.setupPanelNavigation(navCards, { interactiveSelector: 'a, button, input, select, textarea, label, summary' });
     </script>
+    <script src="js/shared-header.js"></script>
 </body>
 </html>

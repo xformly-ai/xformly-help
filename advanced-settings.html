@@ -7,11 +7,10 @@
     
     <link rel="stylesheet" href="css/common.css">
 </head>
-<body>
+<body class="page-search-floating">
     <div class="top-nav">
         <div class="nav-content">
             <a href="index.html" class="home-link">📚 xFormly ユーザーガイド</a>
-            <a href="index.html">← トップページに戻る</a>
         </div>
     </div>
     <div class="breadcrumb">
@@ -27,53 +26,73 @@
 
 <p>詳細設定では、ExcelからCSVへの変換をより細かく制御できます。シート全体に適用される設定と、個別の項目（列）ごとの設定があります。</p>
 
+<div class="search-box">
+    <input type="text" placeholder="🔍 このページ内を検索..." id="searchInput">
+    <p class="search-help">設定の種類・機能カードを部分一致で絞り込みます（最大表示制限なし）。</p>
+    <p class="search-status" id="pageSearchStatus" hidden></p>
+</div>
+
 <h2>設定の種類</h2>
-<ul>
+<ul id="settingsTypeList">
     <li>📊 <a href="advanced-settings-sheet-extraction-options.html">抽出オプション（シート全体の設定）</a> - シート全体に適用される設定</li>
     <li>⚙️ <a href="advanced-settings-column-options.html">抽出オプション（項目ごと）</a> - 各列（項目）に対する個別の設定</li>
 </ul>
 
 <h2>詳細な機能</h2>
 
-<div class="feature-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 30px 0;">
-    <div style="border: 1px solid #e5e7eb; border-radius: 8px; padding: 20px;">
-        <h3>📊 シート全体の設定</h3>
+<div class="feature-grid advanced-feature-grid">
+    <div data-category-url="advanced-settings-sheet-extraction-options.html" tabindex="0" role="link" class="advanced-feature-card">
+        <h3><a class="panel-title-link" href="advanced-settings-sheet-extraction-options.html">📊 シート全体の設定</a></h3>
         <p>Excel シート全体に対する抽出条件を設定できます。</p>
-        <ul style="margin-top: 10px;">
+        <ul class="advanced-feature-list">
             <li>データ範囲の指定</li>
             <li>空白行・空白列の削除</li>
             <li>非表示行・非表示列の削除</li>
             <li>適用範囲の制限</li>
         </ul>
-        <a href="advanced-settings-sheet-extraction-options.html" style="display: inline-block; margin-top: 10px; color: #2563eb;">詳細を見る →</a>
+        <a href="advanced-settings-sheet-extraction-options.html" class="advanced-feature-link">詳細を見る →</a>
     </div>
     
-    <div style="border: 1px solid #e5e7eb; border-radius: 8px; padding: 20px;">
-        <h3>⚙️ 項目ごとの設定</h3>
+    <div data-category-url="advanced-settings-column-options.html" tabindex="0" role="link" class="advanced-feature-card">
+        <h3><a class="panel-title-link" href="advanced-settings-column-options.html">⚙️ 項目ごとの設定</a></h3>
         <p>各列（項目）に対して個別の処理を定義できます。</p>
-        <ul style="margin-top: 10px;">
+        <ul class="advanced-feature-list">
             <li>日付フォーマットの変換</li>
             <li>必須チェック</li>
             <li>桁数チェック</li>
             <li>デフォルト値の設定</li>
         </ul>
-        <a href="advanced-settings-column-options.html" style="display: inline-block; margin-top: 10px; color: #2563eb;">詳細を見る →</a>
+        <a href="advanced-settings-column-options.html" class="advanced-feature-link">詳細を見る →</a>
     </div>
 </div>
 
-<div class="tip" style="margin-top: 40px;">
+<div class="tip advanced-tip-spacing">
     <strong>💡 ヒント:</strong> 現在の機能で対応できない場合は、サポートチームにお問い合わせください。
 </div>
 
 <h2>関連ページ</h2>
-
 <p>詳細設定を理解したら、<a href="basic-operations.html">基本操作</a>に戻って実際の変換作業を行いましょう。</p>
-
-<h2>関連ページ</h2>
 <ul>
     <li><a href="basic-operations-csv-output-settings.html">CSV出力設定</a></li>
-    <li><a href="faq.html">よくある質問</a></li>
 </ul>
+
+<script src="js/common-interactions.js"></script>
+<script src="js/page-search.js"></script>
+<script>
+    const searchInput = document.getElementById('searchInput');
+    const searchStatus = document.getElementById('pageSearchStatus');
+    const featureCards = Array.from(document.querySelectorAll('.feature-grid > div'));
+    const settingItems = Array.from(document.querySelectorAll('#settingsTypeList li'));
+    const searchTargets = [...featureCards, ...settingItems];
+    window.setupPageSearch({
+        input: searchInput,
+        status: searchStatus,
+        targets: searchTargets
+    });
+
+    window.setupPanelNavigation(featureCards);
+</script>
+<script src="js/shared-header.js"></script>
 
     </div>
 </body>

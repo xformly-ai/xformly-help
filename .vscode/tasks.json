@@ -1,0 +1,22 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "git add commit push",
+			"type": "shell",
+			"command": "git",
+			"args": [
+				"add -A && git commit -m \"chore: unify headers, clean docs, and refine search/layout\" && git push"
+			]
+		},
+		{
+			"label": "git add commit push cmd",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/c",
+				"git add -A && git commit -m \"chore: unify headers, clean docs, and refine search/layout\" && git push"
+			]
+		}
+	]
+}

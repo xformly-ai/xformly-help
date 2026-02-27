@@ -7,11 +7,10 @@
     
     <link rel="stylesheet" href="css/common.css">
 </head>
-<body>
+<body class="page-sheet-options">
     <div class="top-nav">
         <div class="nav-content">
             <a href="index.html" class="home-link">📚 xFormly ユーザーガイド</a>
-            <a href="index.html">← トップページに戻る</a>
         </div>
     </div>
     <div class="breadcrumb">
@@ -28,7 +27,7 @@
 <p>抽出オプション（シート全体の設定）では、Excelシート全体に対する抽出条件を設定できます。CSV出力設定画面で「抽出オプション」ボタンをクリックすると、設定ダイアログが表示されます。</p>
 
 <h2>設定画面の開き方</h2>
-    <img src="images/basic-operations-抽出オプションボタン.png" alt="抽出オプションボタン" style="max-width: 80%; height: auto; margin: 20px 0;">
+    <img src="images/basic-operations-抽出オプションボタン.png" alt="抽出オプションボタン" class="guide-image-large">
 
 <ol>
     <li>Excelファイルをアップロード後、CSV出力設定画面に進みます</li>
@@ -38,12 +37,12 @@
 
 <h2>設定項目</h2>
 
-<div class="note" style="background-color: #f8fafc; border-left: 4px solid #3b82f6; padding: 20px; margin: 20px 0;">
-    <ol style="margin-top: 10px; margin-bottom: 0;">
-        <li><a href="#setting-1" style="color: #2563eb;">データ部の終端を一括で指定する</a></li>
-        <li><a href="#setting-2" style="color: #2563eb;">入力値を抽出する</a></li>
-        <li><a href="#setting-3" style="color: #2563eb;">空白行・空白列を詰めてデータを取得する</a></li>
-        <li><a href="#setting-4" style="color: #2563eb;">非表示行・非表示列のデータを取得しない</a></li>
+<div class="note guide-note-emphasis">
+    <ol class="compact-list">
+        <li><a href="#setting-1" class="anchor-link">データ部の終端を一括で指定する</a></li>
+        <li><a href="#setting-2" class="anchor-link">入力値を抽出する</a></li>
+        <li><a href="#setting-3" class="anchor-link">空白行・空白列を詰めてデータを取得する</a></li>
+        <li><a href="#setting-4" class="anchor-link">非表示行・非表示列のデータを取得しない</a></li>
     </ol>
 </div>
 
@@ -159,7 +158,7 @@
 <h4>使用例</h4>
 
 <p><strong>元のExcelデータ（2行目と列Cが非表示）:</strong></p>
-<pre style="background-color: #f5f5f5; padding: 10px; border-radius: 4px;">
+<pre class="code-example">
      A     B     C(非表示)  D
 1    顧客  金額   備考       日付
 2    田中  1000   メモ1      2024/1/1  ← 非表示行
@@ -167,7 +166,7 @@
 </pre>
 
 <p><strong>ONにした場合の出力:</strong></p>
-<pre style="background-color: #f5f5f5; padding: 10px; border-radius: 4px;">
+<pre class="code-example">
 A     B     D
 顧客  金額  日付
 佐藤  2000  2024/1/2
@@ -193,9 +192,9 @@ A     B     D
 <ul>
     <li><a href="advanced-settings-column-options.html">抽出オプション（項目ごと）</a></li>
     <li><a href="basic-operations-csv-output-settings.html">CSV出力設定</a></li>
-    <li><a href="faq.html">よくある質問</a></li>
 </ul>
 
+<script src="js/shared-header.js"></script>
     </div>
 </body>
 </html>

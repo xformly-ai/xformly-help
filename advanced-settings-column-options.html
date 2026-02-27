@@ -7,11 +7,10 @@
     
     <link rel="stylesheet" href="css/common.css">
 </head>
-<body>
+<body class="page-column-options">
     <div class="top-nav">
         <div class="nav-content">
             <a href="index.html" class="home-link">📚 xFormly ユーザーガイド</a>
-            <a href="index.html">← トップページに戻る</a>
         </div>
     </div>
     <div class="breadcrumb">
@@ -26,7 +25,7 @@
 <h1>⚙️ 抽出オプション（項目ごと）</h1>
 
 <p>抽出オプション（項目ごと）では、CSVの各列（項目）に対して個別に設定を行います。データフォーマット指定、必須チェック、桁数チェックなど、列ごとに異なる処理を定義できます。</p>
-    <img src="images/advanced-settings-項目抽出オプション.png" alt="項目抽出オプション" style="max-width: 80%; height: auto; margin: 20px 0;">
+    <img src="images/advanced-settings-項目抽出オプション.png" alt="項目抽出オプション" class="guide-image-large">
 
 <h2>設定画面の開き方</h2>
 <ol>
@@ -36,17 +35,17 @@
 
 <h2>設定項目</h2>
 
-<div class="note" style="background-color: #f8fafc; border-left: 4px solid #3b82f6; padding: 20px; margin: 20px 0;">
+<div class="note guide-note-emphasis">
     <strong>📋 設定項目一覧</strong>
-    <ol style="margin-top: 10px; margin-bottom: 0;">
-        <li><a href="#setting-1" style="color: #2563eb;">ヘッダー名（メモ用）</a></li>
-        <li><a href="#setting-2" style="color: #2563eb;">ヘッダー説明文</a></li>
-        <li><a href="#setting-3" style="color: #2563eb;">データ部の終端を一括で指定する</a></li>
-        <li><a href="#setting-4" style="color: #2563eb;">単セルの値を全行に入力する</a></li>
-        <li><a href="#setting-5" style="color: #2563eb;">入力値を抽出する</a></li>
-        <li><a href="#setting-6" style="color: #2563eb;">日時のフォーマットを選択する</a></li>
-        <li><a href="#setting-7" style="color: #2563eb;">必須チェック</a></li>
-        <li><a href="#setting-8" style="color: #2563eb;">桁数チェック</a></li>
+    <ol class="compact-list">
+        <li><a href="#setting-1" class="anchor-link">ヘッダー名（メモ用）</a></li>
+        <li><a href="#setting-2" class="anchor-link">ヘッダー説明文</a></li>
+        <li><a href="#setting-3" class="anchor-link">データ部の終端を一括で指定する</a></li>
+        <li><a href="#setting-4" class="anchor-link">単セルの値を全行に入力する</a></li>
+        <li><a href="#setting-5" class="anchor-link">入力値を抽出する</a></li>
+        <li><a href="#setting-6" class="anchor-link">日時のフォーマットを選択する</a></li>
+        <li><a href="#setting-7" class="anchor-link">必須チェック</a></li>
+        <li><a href="#setting-8" class="anchor-link">桁数チェック</a></li>
     </ol>
 </div>
 
@@ -127,7 +126,7 @@
 <h4>使用例</h4>
 
 <p><strong>元のExcelデータ（対象セル: A2）:</strong></p>
-<pre style="background-color: #f5f5f5; padding: 10px; border-radius: 4px;">
+<pre class="code-example">
      A       B
 1    区分    金額
 2    売上    1000
@@ -136,7 +135,7 @@
 </pre>
 
 <p><strong>ONにした場合の出力:</strong></p>
-<pre style="background-color: #f5f5f5; padding: 10px; border-radius: 4px;">
+<pre class="code-example">
 A       B
 売上    1000
 売上    2000
@@ -425,9 +424,9 @@ A       B
 <ul>
     <li><a href="advanced-settings-sheet-extraction-options.html">抽出オプション（シート全体の設定）</a></li>
     <li><a href="basic-operations-csv-output-settings.html">CSV出力設定</a></li>
-    <li><a href="faq.html">よくある質問</a></li>
 </ul>
 
+<script src="js/shared-header.js"></script>
     </div>
 </body>
 </html>

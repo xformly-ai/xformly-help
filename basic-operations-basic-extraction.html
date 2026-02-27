@@ -10,7 +10,6 @@
     <div class="top-nav">
         <div class="nav-content">
             <a href="index.html" class="home-link">📚 xFormly ユーザーガイド</a>
-            <a href="index.html">← トップページに戻る</a>
         </div>
     </div>
     <div class="breadcrumb">
@@ -34,7 +33,7 @@
 <div class="example-box">
     <h4>📊 例：売上データのヘッダー</h4>
     <p>Excelの1行目に以下のような見出しがある場合：</p>
-    <table style="margin-top: 10px;">
+    <table class="table-top-spacing">
         <thead>
             <tr>
                 <th>A列</th>
@@ -54,23 +53,23 @@
             </tr>
         </tbody>
     </table>
-    <p style="margin-top: 10px;">この「日付」「商品コード」「商品名」「数量」「金額」がヘッダーです。</p>
+    <p class="text-top-spacing">この「日付」「商品コード」「商品名」「数量」「金額」がヘッダーです。</p>
 </div>
 
 <h3>ヘッダー行の位置を指定する</h3>
 
 <h4>方法 1: ヘッダーテキストをExcelから指定</h4>
 <p>ヘッダー名の入力ボックスをクリックして青線がでている状態で、ヘッダー名が入力されているセルを指定する<strong>行番号</strong>を確認します。</p>
-<img src="images/basic-operations-ヘッダー指定.png" alt="ヘッダー指定" style="max-width: 50%; height: auto; margin: 20px 0;">
-<img src="images/basic-operations-ヘッダー選択済.png" alt="ヘッダー選択済" style="max-width: 50%; height: auto; margin: 20px 0;">
+<img src="images/basic-operations-ヘッダー指定.png" alt="ヘッダー指定" class="guide-image-medium">
+<img src="images/basic-operations-ヘッダー選択済.png" alt="ヘッダー選択済" class="guide-image-medium">
 
 <h4>方法 2: ヘッダーテキストを直接入力</h4>
 <p>ヘッダー名の入力ボックスをクリックして直接ヘッダーテキストを入力します。</p>
-<img src="images/basic-operations-ヘッダー直接入力.png" alt="ヘッダー直接入力" style="max-width: 50%; height: auto; margin: 20px 0;">
+<img src="images/basic-operations-ヘッダー直接入力.png" alt="ヘッダー直接入力" class="guide-image-medium">
 
 <h3>出力項目数の追加・削除</h3>
 <p>必要に応じて、出力する項目（列）の数を追加したり削除したりできます。プラスボタンをクリックして列を追加し、マイナスボタンをクリックして列を削除します。</p>
-<img src="images/basic-operations-抽出項目の追加削除.png" alt="抽出項目の追加削除" style="max-width: 50%; height: auto; margin: 20px 0;">
+<img src="images/basic-operations-抽出項目の追加削除.png" alt="抽出項目の追加削除" class="guide-image-medium">
 
 <h2>📐 データ範囲の指定</h2>
 
@@ -80,10 +79,10 @@
 
 <div class="example-box">
     <h4>📊 例：売上データのデータ範囲</h4>
-    <table style="margin-top: 10px;">
+    <table class="table-top-spacing">
         <thead>
             <tr>
-                <th style="width: 80px;">行番号</th>
+                <th class="col-width-80">行番号</th>
                 <th>A列</th>
                 <th>B列</th>
                 <th>C列</th>
@@ -92,7 +91,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr style="background: #dbeafe;">
+            <tr class="row-highlight-blue">
                 <td><strong>1</strong></td>
                 <td>日付</td>
                 <td>商品コード</td>
@@ -126,7 +125,7 @@
             </tr>
         </tbody>
     </table>
-    <p style="margin-top: 10px;">
+    <p class="text-top-spacing">
         <strong>ヘッダー行：</strong> 1行目（青色）<br>
         <strong>データ範囲：</strong> 2行目～4行目
     </p>
@@ -140,33 +139,33 @@
     <li>✅ <strong>メリット：</strong> 手間がかからない</li>
     <li>✅ <strong>適用可能なデータ：</strong> 途中に空白行がない整ったデータ</li>
 </ul>
-<h4> STEP1：終点の一括設定をオンにする</h4>
+<h4>ステップ1: 終点の一括設定をオンにする</h4>
 <p>抽出オプションボタンを押下し、シート全体の設定画面を開きます。</p>
 <p>データ部の終端を一括で指定するをオンにします。</p>
 <p>※１行目がヘッダーになっている場合は「一番下まで」、１列目がヘッダーになっている場合は「一番右まで」を指定します。</p>
-<img src="images/basic-operations-抽出オプションボタン.png" alt="抽出オプションボタン" style="max-width: 50%; height: auto; margin: 20px 0;">
-<img src="images/basic-operations-シート全体一括設定オン.png" alt="シート全体一括設定オン" style="max-width: 50%; height: auto; margin: 20px 0;">
+<img src="images/basic-operations-抽出オプションボタン.png" alt="抽出オプションボタン" class="guide-image-medium">
+<img src="images/basic-operations-シート全体一括設定オン.png" alt="シート全体一括設定オン" class="guide-image-medium">
 
-<h4> STEP2：各データ部の始点を設定する</h4>
+<h4>ステップ2: 各データ部の始点を設定する</h4>
 <p>データ部の始点（１つ目の項目）を指定します。</p>
-<img src="images/basic-operations-始点セル指定.png" alt="始点セル指定" style="max-width: 50%; height: auto; margin: 20px 0;">
+<img src="images/basic-operations-始点セル指定.png" alt="始点セル指定" class="guide-image-medium">
 
 <h4>方法2: 手動指定</h4>
 <p>対象セル内を指定します。入力セルをクリックしてアクティブ（青枠表示）になった状態で対象の範囲をドラッグ＆ドロップで指定するか、<strong>セル始点：セル終点</strong>の形式で入力します。</p>
 
-<img src="images/basic-operations-データ部を直接指定.png" alt="データ部を直接指定" style="max-width: 80%; height: auto; margin: 20px 0;">
+<img src="images/basic-operations-データ部を直接指定.png" alt="データ部を直接指定" class="guide-image-large">
 
 
 <h2>CSVプレビューの表示と設定適用</h2>
 <p>ヘッダーとデータ範囲の指定が完了したら、CSVプレビューを表示して内容を確認してください。問題なければ設定を適用してください。</p>
-<img src="images/basic-operations-CSVプレビューを表示.png" alt="CSVプレビューを表示" style="max-width: 50%; height: auto; margin: 20px 0;">
-<img src="images/basic-operations-設定を適用.png" alt="設定を適用" style="max-width: 50%; height: auto; margin: 20px 0;">
+<img src="images/basic-operations-CSVプレビューを表示.png" alt="CSVプレビューを表示" class="guide-image-medium">
+<img src="images/basic-operations-設定を適用.png" alt="設定を適用" class="guide-image-medium">
 <p>設定適用ボタンを押下すると抽出設定の保存のダイアログが表示されます。</p>
 <p>各設定の意味合いについては<a href="basic-operations-understanding-definitions.html">出力定義の理解</a>をご覧ください。</p>
 <h2>CSV出力へ進む</h2>
 
 <p>出力CSV名を入力したら、「出力CSV作成へ進む」ボタンを押下してCSV出力に進みます。</p>
-<img src="images/basic-operations-出力CSV作成へ進む.png" alt="設定を適用" style="max-width: 80%; height: auto; margin: 20px 0;">
+<img src="images/basic-operations-出力CSV作成へ進む.png" alt="設定を適用" class="guide-image-large">
 
 <h2>次のステップ</h2>
 <ul>
@@ -182,5 +181,6 @@
     <li><a href="advanced-settings-column-options.html">抽出オプション（項目ごと）</a></li>
 </ul>
 
+<script src="js/shared-header.js"></script>
 </body>
 </html>
